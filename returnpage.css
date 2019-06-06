@@ -1,0 +1,48 @@
+select{
+	border-width: 3px;
+	border-color: red;
+}
+
+
+#headingtext{
+	border: 2px solid black;
+}
+body{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-image: url("ntpcbasic.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+form{
+	margin-top: 50px;
+	transition: aa 4s ease-in-out;
+	font-size: 2.0em;
+}
+
+.form-control{
+	width: 600px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid gray;
+	color:black;
+	font-size: 18px;
+	margin-bottom: 16px;
+	font-size: 1.0em;
+	}
+input{
+	height: 40px;
+}
+/*for submit button*/
+button  {
+	background: green;
+	border-color: transparent;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	margin-top: 20px;
+}
