@@ -35,8 +35,8 @@ body{
 
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
       padding: 15px;
-      margin-top: 70px;
-      margin-bottom: 70px;
+      margin-top: 5px;
+    
     }
     .text-muted {
     padding-top: 11px;
@@ -44,6 +44,6 @@ body{
     font-size: 13px;
 }
 .logopic{
-  height: 25px;
+  height: 22px;
   width: auto;
 }

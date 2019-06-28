@@ -8,8 +8,8 @@
                 <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/form.html">Home</a>
                 <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/emp.html">Add Employee</a>
                 <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/device.html">Add Devices</a>
-                <a href="">Issue</a>
-                <a href="">Return</a>
+                <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/issue.html">Issue</a>
+                <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/return.html">Return</a>
                 <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/report.html">Report</a>
               </div>
         <!-- <a href="images/logo3.png">
@@ -18,7 +18,7 @@
           
 <head>
         
-    <title>ENGINEERING DIVISION MATERIAL REQUISTION SLIP</title>
+    <title>Devices Update</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="dashboard.css" rel="stylesheet" type="text/css" >
 </head>
@@ -33,30 +33,35 @@
                  <div class="card">
                      <div class="container">
 <form>
-     <h1 align="center">Issue Form</h1>
+     <h1 align="center">Update Devices</h1>
         <h6 class="card-subtitle mb-2 text-muted" align="center">Device Issue and Return System</h6><br>
     
     <br>
     <div>
-        <label>Type of device </label>
-            <select>
-                    <option>Item type</option>
-                    <optgroup label="Laptops">
-                      
+        <label style="width: 40%">Company </label>
+            <select style="width: 50%">
+                    
+                    
+                      <option >Company</option>
                       <option value="HP">HP</option>
                       <option value="Lenevo">Lenevo</option>
                       <option value="Dell">Dell</option>
-                    </optgroup>
-                    <optgroup label="Printers">
-                      <option value="HP">HP</option>
-                      <option value="Dell">Dell</option>
-                    </optgroup>
-                    <optgroup label="Keyboards">
-                        <option value="HP">HP</option>
-                        <option value="Dell">Dell</option>
-                    </optgroup>
-                  </select><br>
+                      <option value="Dell">Apple</option>
+                   
+                  </select>
+                  <br>
+                  <br>
+                  <label style="width: 40%">Type of device </label>
+                      <select style="width: 50%">
+                    <option >Item type</option>
+                    <option value="Laptop">Laptop</option>
+                      <option value="Printer">Printer</option>
+                      <option value="Keyboard">Keyboard</option>
+                      <option value="Hard Disk">Hard Disk</option>
+                  </select>
+
                   <div>
+                    <br>
                       <input type="checkbox" name="returnable" value="returnable"> Is it returnable<br>
                   </div>
                   <div>
