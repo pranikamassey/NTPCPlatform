@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Index</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body style = "padding:10px;">
-  <br>
+<div class="topnav">
+            <a href="images/logo.png">
+               <img src="images/logo.png" alt="NTPC logo" class="logopic">
+            </a>
+            <a class="nav-item nav-link" href="index.php">Home</a>
+            <a class="nav-item nav-link " href="addemployee.php">Add Employee</a>
+            <a class="nav-item nav-link" href="adddevice.php">Add Device</a>
+            <a class="nav-item nav-link" href="issue.php">Issue</a>
+            <a class="nav-item nav-link" href="return.php">Return</a>
+            <a href="report.html">Report</a>
+              </div>
+  <head>
+    <meta charset="utf-8">
+    <title>Devices</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="dashboard.css" rel="stylesheet" type="text/css" >
+  </head>
+  <body style = "padding:10px;">
+ <!--  <br>
   <nav class="nav nav-pills nav-justified">
     <a class="nav-item nav-link" href="index.php">Home</a>
-    <a class="nav-item nav-link" href="addemployee.php">Add Employee</a>
-    <a class="nav-item nav-link" href="adddevice.php">Add Device</a>
+    <a class="nav-item nav-link" href="addemployee.php">Employees</a>
+    <a class="nav-item nav-link" href="adddevice.php">Devices</a>
     <a class="nav-item nav-link active" href="issue.php">Issue</a>
     <a class="nav-item nav-link" href="return.php">Return</a>
   </nav>
-  <br>
+  <br> -->
   <br>
   <br>
 
-  <div style='padding:20px'>
+  <!-- <div style='padding:20px'> -->
 
     <h2>Issue Device</h2>
     <form action="issue.php" method="post">
@@ -26,7 +38,7 @@
       <label>Date of issue</label>
       <input type="date" name="date1" value="">
       <input type="number" name="employeeno" value="" placeholder="employeeno">
-      <input type="number" name="deviceno" value="" placeholder="deviceno">
+      <input type="text" name="deviceno" value="" placeholder="deviceno">
 
       <input type="submit" name="submit" value="Issue">
 
@@ -50,6 +62,7 @@ if($conn){
     $date1 = date('Y-m-d', $date1);
     $employeeno = $_POST['employeeno'];
     $deviceno = $_POST['deviceno'];
+    $deviceno = substr($deviceno, 2);
 
     #####################################
 
@@ -113,7 +126,7 @@ if($conn){
     echo "<table border = 1><th>Issue No</th>  <th>Date of Issue</th>   <th>Employee No</th>   <th>Employee Name</th>     <th>Device No</th>   <th>Device Company</th>   <th>Device Type</th>";
     for($i = 0; $i < sizeof($x); $i++){
 
-      print_r('<tr>'.'<td>'.$x[$i][0].'</td>'.'<td>'.$x[$i][1].'</td>'.'<td>'.$x[$i][2].'</td>'.'<td>'.$x[$i][3].'</td>'.'<td>'.$x[$i][4].'</td>'.'<td>'.$x[$i][5].'</td>'.'<td>'.$x[$i][6].'</td>'.'</tr>');
+      print_r('<tr>'.'<td>'.$x[$i][0].'</td>'.'<td>'.$x[$i][1].'</td>'.'<td>'.$x[$i][2].'</td>'.'<td>'.$x[$i][3].'</td>'.'<td>'.substr($x[$i][5], 0, 1).substr($x[$i][6], 0, 1).$x[$i][4].'</td>'.'<td>'.$x[$i][5].'</td>'.'<td>'.$x[$i][6].'</td>'.'</tr>');
     }
     echo "</table>";
   }

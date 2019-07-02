@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 
-<div class="topnav">
+          <div class="topnav">
             <a href="images/logo.png">
                <img src="images/logo.png" alt="NTPC logo" class="logopic">
             </a>
@@ -11,7 +11,7 @@
             <a class="nav-item nav-link" href="adddevice.php">Add Device</a>
             <a class="nav-item nav-link" href="issue.php">Issue</a>
             <a class="nav-item nav-link" href="return.php">Return</a>
-            <a href="file:///F:/Pranika(prof.)/webdev/NTPCplatform/report.html">Report</a>
+            <a href="report.html">Report</a>
               </div>
 
 
@@ -42,7 +42,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-0"></div>
             <div class="col-lg-6 col-md-6 col-sm-10">
-                
+                <br><br>
                  <div class="card">
                      <div class="container">
 <form action="addemployee.php" method="post">
@@ -79,6 +79,7 @@
     </form>
     </div>
     </div>
+    <br><br>
     </div>
      <div class="col-lg-3 col-md-3 col-sm-0"></div>
     </div>
