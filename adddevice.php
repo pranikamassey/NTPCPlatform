@@ -50,7 +50,7 @@
     <div>
        <div>
         <label style="width: 40%">Company</label>
-        <input style="width: 50%" type="text" name="company" placeholder="Enter Company">
+        <input style="width: 50%" type="text" name="company" value="" placeholder="Enter Company">
       </div>
        <!--  <label style="width: 40%">Company </label>
             <select style="width: 50%" name="company" type="text">
@@ -75,7 +75,7 @@
                   </select> -->
                   <div>
                    <label style="width: 40%">Type</label>
-                   <input style="width: 50%" type="text" name="type" placeholder="Enter type">
+                   <input style="width: 50%" type="text" name="type" value="" placeholder="Enter type">
                  </div>
 
                   <div>
@@ -84,7 +84,7 @@
                   </div>
                   <div>
                     <br>
-                        <button class="btn btn-primary" type="submit" name="submit" value="Add Row">Submit</button>
+                        <button class="btn btn-primary" type="submit" name="submit" value="Add Device">Submit</button>
                   </div>
     </div>
     </form>
@@ -125,11 +125,9 @@ if($conn){
     $company = $_POST['company'];
     $type = $_POST['type'];
     $returnable = isset($_POST['returnable']) ? "Yes" : "No";
-    echo "<h1>'$company'</h1>";
-    echo "<h1>'$type'</h1>";
-    echo "<h1>'$returnable'</h1>";
+   
 
-    $res2 = mysqli_query($conn, "INSERT INTO `Device`(`Company`, `Type`, `Available`, `Returnable`) VALUES ('$company', '$type', 1, $returnable) ");
+    $res2 = mysqli_query($conn, "INSERT INTO `Device`(`Company`, `Type`, `Available`, `Returnable`) VALUES ('$company', '$type', 'Yes', '$returnable') ");
 
     if($res2){
       echo "Data entered in database successfully";
